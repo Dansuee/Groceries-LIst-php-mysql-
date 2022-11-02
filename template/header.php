@@ -25,10 +25,19 @@
         h4{
             color:#35a835;
         }
+        .card{
+            border-radius:50px;
+            background-image:url('image/banner.jpg');
+            background-size:cover;
+        }
+        .card-content {
+         color:white;
+        }
+
     </style>
     </head>
     <body class="grey lighten-4">
-        <nav class="white z-depth-0">
+        <nav class="black z-depth-0">
             <div class="container">
                 <a href="#" class="brand-logo brand-text">Groceries List</a>
                 <ul id="nav-mobile" class="right hide-on-small-and-down">
