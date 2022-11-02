@@ -45,8 +45,8 @@ if(isset($_POST['submit'])){
     
     <?php  include('template/header.php'); ?>    
 
-    <section class="container grey-text">
-        <h4 class="center">Add a Groceries</h4>
+    <section class="container">
+        <h4 class="center">Add Grocery</h4>
         <form action="add.php" class="white" method="POST">
             <label>Item:</label>
             <input type="text" name="item" value="<?php echo $item ?>">

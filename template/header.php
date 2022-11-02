@@ -3,8 +3,16 @@
         <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style type="text/css">
+        
+        body{
+            background-image:url('image/background.jpg');
+        }
+        .container {
+            color:#35a835;
+        }
         .brand{
             background: #35a835 !important;
+            
         }
         .brand-text{
             color: #35a835 !important;
