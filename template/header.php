@@ -42,7 +42,10 @@
             background-size:cover;
             border-radius:50px;
         }
-        
+        .other{
+            color:white;
+            font-size:15px;
+        }
 
     </style>
     </head>

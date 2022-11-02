@@ -50,7 +50,13 @@ mysqli_close($connect);
                     </div>
                 </div>
             <?php } ?>    
-
+                 <div class="other">   
+                    <?php if(count($groceries) >= 3 ):{ ?>
+                        <p>There are 2 or more items</p>
+                     <?php } else: { ?>
+                         <p>There are 2 or less items</p>
+                     <?php endif; ?>   
+                </div>
         </div>
     </div>
 
