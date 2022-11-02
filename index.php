@@ -38,7 +38,7 @@ mysqli_close($connect);
             <?php foreach($groceries as $grocery) {?>
                 
                 <div class="col s6 md3">
-                    <div class="card z-depth-0">
+                    <div class="card black z-depth-0">
                         <div class="card-content center">
                             <h6>name: <?php echo htmlspecialchars($grocery['item']); ?></h6>
                             <div>quantity: <?php echo htmlspecialchars($grocery['quantity']);?></div>
