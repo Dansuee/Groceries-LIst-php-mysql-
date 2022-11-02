@@ -9,6 +9,7 @@
         }
         .container {
             color:#35a835;
+           
         }
         .brand{
             background: #35a835 !important;
@@ -33,6 +34,15 @@
         .card-content {
          color:white;
         }
+        .brand-text a{
+            border-radius:50px;
+        }
+        .white{
+            background-image:url('image/bg.jpg');
+            background-size:cover;
+            border-radius:50px;
+        }
+        
 
     </style>
     </head>

@@ -48,13 +48,13 @@ if(isset($_POST['submit'])){
     <section class="container">
         <h4 class="center">Add Grocery</h4>
         <form action="add.php" class="white" method="POST">
-            <label>Item:</label>
-            <input type="text" name="item" value="<?php echo $item ?>">
+            <label class="white-text">Item:</label>
+            <input type="text" name="item" class=""value="<?php echo $item ?>">
             <div class="red-text"><?php echo $errors['item']?></div>
-            <label>Quantity(kg/L/pc):</label>
+            <label class="white-text">Quantity(kg/L/pc):</label>
             <input type="text" name="quantity" value="<?php echo $quantity ?>">
             <div class="red-text"><?php echo $errors['quantity']?></div>
-            <label>Price(php):</label>
+            <label class="white-text">Price(php):</label>
             <input type="text" name="price" value="<?php echo $price ?>">
             <div class="red-text"><?php echo $errors['price']?></div>
             <div class="center">
