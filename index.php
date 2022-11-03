@@ -1,15 +1,9 @@
 <?php 
 
-//connect to db
-$connect = mysqli_connect('localhost', 'root' , '' , 'groceries_list');
-
-//check connection
-if(!$connect){
-    echo 'Connection Error:' . mysqli_connect_error(); 
-}
+include('config/db_connect.php');
 
 //query for get all groceries list
-$sql = 'SELECT item, quantity, price FROM grocery ORDER BY create_at';
+$sql = 'SELECT id,item, quantity, price FROM grocery ORDER BY create_at';
 
 //get result from db
 $result = mysqli_query($connect, $sql);
@@ -35,32 +29,27 @@ mysqli_close($connect);
     
     <div class="container">
         <div class="row">
-            <?php foreach($groceries as $grocery) {?>
-                
+            <?php foreach($groceries as $grocery): ?>
+
                 <div class="col s6 md3">
                     <div class="card black z-depth-0">
+                        <img src="image/logo.png" class="grocery">
                         <div class="card-content center">
                             <h6>name: <?php echo htmlspecialchars($grocery['item']); ?></h6>
                             <div>quantity: <?php echo htmlspecialchars($grocery['quantity']);?></div>
                             <div>price: <?php echo htmlspecialchars($grocery['price']);?>php</div>
                         </div>
                         <div class="card-action right-align">
-                            <a href="#" class="brand-text">more info</a>
+                        <a class="brand-text" href="details.php?id=<?php echo $grocery['id'] ?>">more info</a>
                         </div>
                     </div>
                 </div>
-            <?php } ?>    
-                 <div class="other">   
-                    <?php if(count($groceries) >= 3 ):{ ?>
-                        <p>There are 2 or more items</p>
-                     <?php } else: { ?>
-                         <p>There are 2 or less items</p>
-                     <?php endif; ?>   
-                </div>
+
+            <?php endforeach; ?>    
         </div>
     </div>
 
     <?php  include('template/footer.php'); ?>    
     
-
+    <
 </html>

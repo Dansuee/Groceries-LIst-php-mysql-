@@ -1,5 +1,7 @@
 <?php 
 
+include('config/db_connect.php');
+
 $item = $quantity = $price = '';
 $errors = array('item'=>'', 'quantity'=>'', 'price'=>'');
 
@@ -33,7 +35,23 @@ if(isset($_POST['submit'])){
     if(array_filter($errors)){
        // echo 'error in the form';
     }else {
-        header('Location: index.php');
+        
+        $item = mysqli_real_escape_string($connect, $_POST['item']);
+        $quantity = mysqli_real_escape_string($connect, $_POST['quantity']);
+        $price = mysqli_real_escape_string($connect, $_POST['price']);
+        
+        //insert into sql
+        $sql = "INSERT INTO grocery (item,quantity,price) VALUES('$item', '$quantity', '$price')";
+
+        //save to sql
+        if(mysqli_query($connect, $sql)){
+            header('Location: index.php');
+        } else {
+            echo 'querry error' . mysqli_error($connect);
+        }
+
+
+        
     }
 }
 
