@@ -3,7 +3,7 @@
 include('config/db_connect.php');
 
 //query for get all groceries list
-$sql = 'SELECT id,item, quantity, price FROM grocery ORDER BY create_at';
+$sql = 'SELECT id,item, quantity, price FROM grocery ORDER BY create_at DESC';
 
 //get result from db
 $result = mysqli_query($connect, $sql);
